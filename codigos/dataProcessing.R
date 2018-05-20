@@ -29,6 +29,7 @@ funcManiTab1 <- function(data){
     str_replace_all("\\(", "")%>%
     str_replace_all("\\)", "")%>%
     str_replace_all("-", "_")%>%
+    str_replace_all(":", "_")%>%
     stri_trans_general("Latin-ASCII")
 
   # selecionar colunas sem missing cases completa e atribuir nome
@@ -79,30 +80,30 @@ pordata004 <- funcManiTab2(consultas_medicas_nos_centros_de_saude_por_habitante_
 #==== pordata 005 - pessoal ao servico nos centros de saude ====#
 
 # total
-pordata005_01 <- funcManiTab2(`pessoal_ao_servico_nos_centros_de_saude:_total_e_por_tipo_de_pessoal_ao_servico_1999_2012`, 
+pordata005_01 <- funcManiTab2(pessoal_ao_servico_nos_centros_de_saude__total_e_por_tipo_de_pessoal_ao_servico_1999_2012, 
                               6, 9, "pessoal_ao_servico_centrosaude_total")
 # medicos
-pordata005_02 <- funcManiTab2(`pessoal_ao_servico_nos_centros_de_saude:_total_e_por_tipo_de_pessoal_ao_servico_1999_2012`, 
+pordata005_02 <- funcManiTab2(pessoal_ao_servico_nos_centros_de_saude__total_e_por_tipo_de_pessoal_ao_servico_1999_2012, 
                               11, 14, "pessoal_ao_servico_centrosaude_medicos")
 # enfermeiros
-pordata005_03 <- funcManiTab2(`pessoal_ao_servico_nos_centros_de_saude:_total_e_por_tipo_de_pessoal_ao_servico_1999_2012`, 
+pordata005_03 <- funcManiTab2(pessoal_ao_servico_nos_centros_de_saude__total_e_por_tipo_de_pessoal_ao_servico_1999_2012, 
                               17, 20, "pessoal_ao_servico_centrosaude_enfermeiros")
 # total
-pordata005_04 <- funcManiTab2(`pessoal_ao_servico_nos_centros_de_saude:_total_e_por_tipo_de_pessoal_ao_servico_1999_2012`, 
+pordata005_04 <- funcManiTab2(pessoal_ao_servico_nos_centros_de_saude__total_e_por_tipo_de_pessoal_ao_servico_1999_2012, 
                               23, 26, "pessoal_ao_servico_centrosaude_outros")
 
 #==== pordata 006 - pessoal ao servico nos hospitais ====#
 # total
-pordata006_01 <- funcManiTab2(`pessoal_ao_servico_nos_hospitais:_total_e_por_tipo_de_pessoal_ao_servico`, 
+pordata006_01 <- funcManiTab2(pessoal_ao_servico_nos_hospitais__total_e_por_tipo_de_pessoal_ao_servico, 
                               5, 8, "pessoal_ao_servico_centrosaude_total")
 # medicos
-pordata006_02 <- funcManiTab2(`pessoal_ao_servico_nos_hospitais:_total_e_por_tipo_de_pessoal_ao_servico`, 
+pordata006_02 <- funcManiTab2(pessoal_ao_servico_nos_hospitais__total_e_por_tipo_de_pessoal_ao_servico, 
                               15, 18, "pessoal_ao_servico_centrosaude_medicos")
 # enfermeiros
-pordata006_03 <- funcManiTab2(`pessoal_ao_servico_nos_hospitais:_total_e_por_tipo_de_pessoal_ao_servico`,
+pordata006_03 <- funcManiTab2(pessoal_ao_servico_nos_hospitais__total_e_por_tipo_de_pessoal_ao_servico,
                               25, 28, "pessoal_ao_servico_centrosaude_enfermeiros")
 # total
-pordata006_04 <- funcManiTab2(`pessoal_ao_servico_nos_hospitais:_total_e_por_tipo_de_pessoal_ao_servico`, 
+pordata006_04 <- funcManiTab2(pessoal_ao_servico_nos_hospitais__total_e_por_tipo_de_pessoal_ao_servico, 
                               35, 38, "pessoal_ao_servico_centrosaude_outros")
 
 #==== pordata 007 - mortos e feridos em acidentes de viacao ====#
