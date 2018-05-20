@@ -114,6 +114,68 @@ pordata007_01 <- funcManiTab2(feridos_e_mortos_em_acidentes_de_viacao,
 pordata007_02 <- funcManiTab2(feridos_e_mortos_em_acidentes_de_viacao, 
                               17, 20, "mortos_em_acidentes_de_viacao")
 
+# peoes atropelados
+nome_011 <- funcManiTab2(peoes_atropelados__total_e_mortos, 
+                              X, Y, "peoes_atropelados_total_e_mortos")
+
+# internamentos nos centros de saúde
+pordata_012_02<- funcManiTab2(internamentos_nos_centros_de_saude__1993_2012, 
+                              6, 9, "internamentos_nos_centros_de_saude__1993_2012")
+
+# internamentos nos hospitais
+
+pordata_012_01 <- funcManiTab2(internamentos_nos_hospitais, 
+                              5, 11, "internamentos_nos_hospitais")
+
+#Dias de internamento hospitais
+
+pordata_013_01 <- funcManiTab2(dias_de_internamento_nos_hospitais, 
+                               5, 12, "dias_de_internamento_nos_hospitais")
+
+#Dias de internamento centros de saúde
+
+pordata_013_02<- funcManiTab2(dias_de_internamento_nos_centros_de_saude__1993_2012, 
+                               5, 9, "dias_de_internamento_nos_centros_de_saude__1993_2012")
+
+#Número de leitos (camas) por habitantes hospitais
+
+pordata_014_01<- funcManiTab2(lotacao_dos_hospitais_gerais_e_especializados, 
+                              5, 12, "lotacao_dos_hospitais_gerais_e_especializados")
+
+#Número de leitos (camas) por habitantes centros de saúde
+
+pordata_014_02<- funcManiTab2(lotacao_dos_centros_de_saude_1993_2012, 
+                              6, 9, "lotacao_dos_centros_de_saude_1993_2012")
+
+#Urgencias hospitais
+
+pordata_015_01<- funcManiTab2(urgencias_nos_hospitais, 
+                              5, 8, "urgencias_nos_hospitais")
+
+#Urgencias centros de saude
+
+pordata_015_02<- funcManiTab2(urgencias_nos_centros_de_saude_1999_2012, 
+                              5, 8, "urgencias_nos_centros_de_saude_1999_2012")
+
+#partos hospitais
+
+pordata_016<- funcManiTab2(partos_nos_hospitais, 
+                              X, Y, "partos_nos_hospitais")
 
 
+#Extensões aos centros de saúde
+
+pordata_017<- funcManiTab2(extensoes_dos_centros_de_saude_1993_2011, 
+                           X, Y, "extensoes_dos_centros_de_saude_1993_2011s")
+
+#Número de interrupções voluntárias de gravidez
+
+pordata_018<- funcManiTab2(interrupcoes_voluntarias_da_gravidez_nos_estabelecimentos_de_saude, 
+                           3, 4, "interrupcoes_voluntarias_da_gravidez_nos_estabelecimentos_de_saude")
+
+
+#Número de Estabelecimentos Farmcêuticos
+
+pordata_019<- funcManiTab2(farmacias_e_postos_farmaceuticos_moveis, 
+                           3, 4, "farmacias_e_postos_farmaceuticos_moveis")
 
