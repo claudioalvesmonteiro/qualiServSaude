@@ -114,6 +114,30 @@ pordata007_01 <- funcManiTab2(feridos_e_mortos_em_acidentes_de_viacao,
 pordata007_02 <- funcManiTab2(feridos_e_mortos_em_acidentes_de_viacao, 
                               17, 20, "mortos_em_acidentes_de_viacao")
 
+#==== pordata 008 e 009 - populacao total e grupo etario [MERGIR COM TABELA FINAL] ====#
+pordata008 <- populacao_residente__total_e_por_grupo_etario[populacao_residente__total_e_por_grupo_etario$X__1 == "Município" & 
+                                                     !is.na(populacao_residente__total_e_por_grupo_etario$X__2),
+                                                   c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40)]
+
+colnames(pordata008) <- c("municipio", "pop_total", "pop_0a4_anos", "pop_5a9_anos",
+                          "pop_10a14_anos", "pop_15a19_anos", "pop_20a24_anos", 
+                          "pop_25a29_anos", "pop_30a34_anos", "pop_35a39_anos",
+                          "pop_40a44_anos", "pop_45a49_anos", "pop_50a54_anos",
+                          "pop_55a59_anos", "pop_60a64_anos", "pop_65a69_anos",
+                          "pop_70a74_anos", "pop_75a79_anos", "pop_80a84_anos",
+                          "pop_85+anos") 
+
+# renomear colunas e criar coluna de info
+pordata003$informacao <- "numero_habitantes_por_farmaceutico"
+
+#===========================#
+# combinar tabelas em base
+#===========================#
+
+basePordata <- rbind(pordata001, pordata003, pordata004, pordata005_01, pordata005_02,
+                     pordata005_03, pordata005_04, pordata006_01, pordata006_02, pordata006_03,
+                     pordata006_04, pordata007_01, pordata007_02, pordata008)
+
 
 
 
